@@ -1,15 +1,32 @@
+//import axios from "axios";
 import React, { useState } from "react";
+import { axiosWithAuth, baseUrl } from "../services/auth-service";
 
 const RecipeForm = () => {
   const [title, setTitle] = useState("");
   const [source, setSource] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
-  const [catagories, setCatagories] = useState("");
+  // const [catagories, setCatagories] = useState("");
 
   const newRecipe = async (e) => {
     e.preventDefault();
-    console.log("recipe added");
+    
+    const recipeData = {
+      title: title,
+      source: source,
+      ingredients: ingredients,
+      instructions: instructions,
+      catagories: '1,2,3',
+    };
+    axiosWithAuth()
+      .post(`${baseUrl}/recipes`, recipeData)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -45,9 +62,9 @@ const RecipeForm = () => {
         <br />
         <label htmlFor="catagories-input">Catagories</label>
         <input
-          id="catagories-input"
-          value={catagories}
-          onChange={(e) => setCatagories(e.target.value)}
+          // id="catagories-input"
+          // value={catagories}
+          // onChange={(e) => setCatagories(e.target.value)}
         />
         <button>Add New Recipe</button>
       </form>

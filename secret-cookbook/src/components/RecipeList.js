@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 import React, { useEffect } from 'react';
 import { fetchRecipes } from '../state/actions/recipeActions';
+import RecipeForm from '../components/RecipeForm';
 
 const RecipeList = (props) => {
 
@@ -11,6 +12,7 @@ const RecipeList = (props) => {
 
   return (
     <div>
+      <RecipeForm />
       <h2>
         { props.loading ? <Loader /> : 
           props.recipes && props.recipes.map((item) => {
