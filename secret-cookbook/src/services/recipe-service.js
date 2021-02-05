@@ -5,15 +5,13 @@ export const getRecipes = async () => {
     const url = `${baseUrl}/recipes`;
     const token = localStorage.getItem("token");
 
-    return () => {
-        axios.get(url, {
-            headers: {
-                Authorization: token,
-            },
-        }).then((res) => {
-            return res.data
-        }).catch((error) => {
-            return error
-        });
-    };
+    axios.get(url, {
+          headers: {
+              Authorization: token,
+          },
+      }).then((res) => {
+          return res.data
+      }).catch((error) => {
+          return error
+      });
 };
