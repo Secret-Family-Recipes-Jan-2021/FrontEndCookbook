@@ -1,7 +1,20 @@
 import axios from 'axios';
 
-// const baseUrl = "https://secret-cookbook-jan2021.herokuapp.com";
-const baseUrl = 'https://cookbook-lambda.herokuapp.com';
+export const baseUrl = 'https://cookbook-lambda.herokuapp.com';
+
+export const isAuthenticated = () => {
+  return !!localStorage.getItem('token');
+};
+
+export const axiosWithAuth = () => {
+  const token = localStorage.getItem('token');
+
+  return axios.create({
+    headers: {
+      Authorization: token,
+    },
+  });
+};
 
 export const login = async (username, password) => {
   const url = `${baseUrl}/users/login`;

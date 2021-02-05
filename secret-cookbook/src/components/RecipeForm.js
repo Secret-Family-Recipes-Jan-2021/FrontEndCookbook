@@ -15,35 +15,35 @@ const RecipeForm = () => {
   return (
     <div>
       <form onSubmit={newRecipe}>
-        <label for="title-input">Title</label>
+        <label htmlFor="title-input">Title</label>
         <input
           id="title-input"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <br />
-        <label for="source-input">Source</label>
+        <label htmlFor="source-input">Source</label>
         <input
           id="source-input"
           value={source}
           onChange={(e) => setSource(e.target.value)}
         />
         <br />
-        <label for="ingredients-input">Ingredients</label>
-        <input
+        <label htmlFor="ingredients-input">Ingredients</label>
+        <textarea
           id="ingredients-input"
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
         />
         <br />
-        <label for="instructions-input">Instructions</label>
-        <input
+        <label htmlFor="instructions-input">Instructions</label>
+        <textarea
           id="instructions-input"
           value={instructions}
           onChange={(e) => setInstructions(e.target.value)}
         />
         <br />
-        <label for="catagories-input">Catagories</label>
+        <label htmlFor="catagories-input">Catagories</label>
         <input
           id="catagories-input"
           value={catagories}

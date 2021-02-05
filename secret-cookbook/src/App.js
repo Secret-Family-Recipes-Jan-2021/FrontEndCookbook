@@ -32,7 +32,9 @@ function App() {
           </Route>
 
           <Route exact path='/recipes/new-recipe'>
-            <RecipeForm />
+            <PrivateRoute>
+              <RecipeForm />
+            </PrivateRoute>
           </Route>
 
           <Route path='/users/login'>
