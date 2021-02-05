@@ -27,7 +27,7 @@ export const recipeReducer = (state = initialState, action) => {
     case FETCH_RECIPES_FAIL:
       return {
         ...state,
-        errors: state.errors,
+        errors: action.payload,
         loading: false,
       };
     default:
