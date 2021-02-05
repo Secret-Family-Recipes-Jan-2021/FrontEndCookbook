@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.LandingTitle{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  color: rgb(190, 17, 17);
+  }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .landingLink{
+    font-size: 5rem;
+    justify-content: space-around;
+    margin: 5rem;
+  }
+
+/* .photoContainer{
+  display: flex;
+  justify-content: center;
+  max-width: 100rem;
+  max-height: 50%;
+
+
+
+} */
