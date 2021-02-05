@@ -8,12 +8,14 @@ import RecipeList from "./components/RecipeList";
 import RecipeLogin from "./components/RecipeLogin";
 import RecipeRegister from './components/RecipeRegister';
 import RecipeForm from './components/RecipeForm';
+import jumbotron, { Jumbotron } from "react-bootstrap"
 
 
 function App() {
   return (
     <Router>
       <div>
+        <Jumbotron><h1>Welcome To Secret Cookbook!</h1></Jumbotron>
         <ul>
           <li>
             <Link to='/users/login'>Login</Link>

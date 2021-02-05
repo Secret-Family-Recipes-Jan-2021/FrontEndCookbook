@@ -7,6 +7,7 @@ import logger from "redux-logger";
 import "./index.css";
 import App from "./App";
 import { recipeReducer } from "./state/reducers/recipeReducer";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = createStore(recipeReducer, applyMiddleware(logger, thunk));
 
