@@ -59,6 +59,14 @@
     margin: 5rem;
   }
 
+  .recipeList{
+    color: aquamarine;
+  }
+
+  .recipeListTitle{
+    color: #61dafb;
+  }
+
 /* .photoContainer{
   display: flex;
   justify-content: center;

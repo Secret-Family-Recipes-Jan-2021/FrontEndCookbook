@@ -7,7 +7,7 @@ const RecipeForm = () => {
   const [source, setSource] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
-  // const [catagories, setCatagories] = useState("");
+  const [categories, setCategories] = useState("");
 
   const newRecipe = async (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const RecipeForm = () => {
       source: source,
       ingredients: ingredients,
       instructions: instructions,
-      catagories: '1,2,3',
+      categories: categories,
     };
     axiosWithAuth()
       .post(`${baseUrl}/recipes`, recipeData)
@@ -60,11 +60,11 @@ const RecipeForm = () => {
           onChange={(e) => setInstructions(e.target.value)}
         />
         <br />
-        <label htmlFor="catagories-input">Catagories</label>
+        <label htmlFor="categories-input">Categories</label>
         <input
-          // id="catagories-input"
-          // value={catagories}
-          // onChange={(e) => setCatagories(e.target.value)}
+          id="categories-input"
+          value={categories}
+          onChange={(e) => setCategories(e.target.value)}
         />
         <button>Add New Recipe</button>
       </form>

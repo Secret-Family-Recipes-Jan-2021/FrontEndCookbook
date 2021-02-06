@@ -18,10 +18,12 @@ const RecipeList = (props) => {
           props.recipes && props.recipes.map((item) => {
             console.log(item)
             return <div className='recipe' key={item.id}>
-                <h2>{item.title}</h2>
-                <p>{item.ingredients}</p>
-                <p>{item.instructions}</p>
-                <p>{item.username}</p>
+                <h2 className='recipeListTitle'>Lets Make : {item.title}</h2>
+                <p className='recipeList'>From : {item.source}</p>
+                <p className='recipeList'>You'll need : {item.ingredients}</p>
+                <p className='recipeList'>Then you'll : {item.instructions}</p>
+                {/*<p className='recipeList'>Category : {item.categories}</p>*/}
+                <p className='recipeList'>Saved by : {item.username}</p>
             </div>
           })
         }
