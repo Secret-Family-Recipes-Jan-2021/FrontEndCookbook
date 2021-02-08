@@ -57,6 +57,8 @@
     font-size: 5rem;
     justify-content: space-around;
     margin: 5rem;
+    text-decoration: none;
+    color: inherit;
   }
 
   .recipeList{
@@ -66,6 +68,8 @@
   .recipeListTitle{
     color: #61dafb;
   }
+
+
 
 /* .photoContainer{
   display: flex;
