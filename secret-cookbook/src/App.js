@@ -9,7 +9,7 @@ import RecipeLogin from "./components/RecipeLogin";
 import RecipeRegister from './components/RecipeRegister';
 import RecipeForm from './components/RecipeForm';
 import RecipeHome from "./components/RecipeHome"
-import jumbotron, { Jumbotron } from "react-bootstrap"
+import { Jumbotron } from "react-bootstrap"
 
 
 function App() {
